@@ -379,6 +379,9 @@ footer h3 {
         font-size: 1rem;
         margin: 1.5rem 0;
     }
+    .top-bild {
+        height: 35vh;
+    }
     section {
         padding: 3rem 2rem;
     }
