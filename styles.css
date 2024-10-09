@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --logo-blue: #07a4fe;
+    --logo-blue2: #0366e5;
+    --logo-blue3: #003c8b;
+    --logo-black: #0e151f;
+    --logo-rot: #d40e1f;
+    --bg-black: #090909;
+    --bg-grey: #202020;
+    --text-color: white;
+}
+body {
+    background-color: #ddf2ff;
+}
+/*---------------------NAVIGATION---------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.7rem 10.5%;
+    background: rgba(3, 102, 229, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+.logo {
+    height: 3rem;
+    width: auto;
+    transition: 0.6s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.03);
+}
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+.navbar a:hover {
+    color: gold;
+    border-bottom: 1px solid gold;
+}
+.menu-icons {
+    display: none;
+}
+/*---------------------TOP BILD---------------------*/
+.top-bild {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.top-bild img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Bild im Hintergrund hinter dem Inhalt */
+}
+#top-bild1 {
+    background-image: url('images/Bucher-Kipper.jpg');
+}
+#top-bild2 {
+    background-image: url('images/Mulden-Transport.jpg');
+}
+/*---------------------HOME-START SECTION---------------------*/
+section {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 3rem 5rem;
+}
+.home h2 {
+    font-size: 1.8rem;
+    font-weight: 550;
+    margin-top: 1.6rem;
+}
+.home h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.7rem 0 1.5rem 0;
+}
+.home p {
+    max-width: 1000px;
+}
+p, a {
+    font-size: 1.2rem;
+}
+/*---------------------HOME-ANGEBOTE---------------------*/
+.angebot-container {
+    display: flex;
+    justify-content: space-between;
+}
+.angebotbox {
+    max-width: 300px;
+    width: 100%;
+    border-top: 1px solid black;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+.angebotbox img {
+    width: 100%;
+    height: auto;
+}
+.angebotbox h3 {
+    margin: 1.3rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+.angebotbox p {
+    padding-top: 0.3rem;
+}
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--logo-blue2);
+    transition: 0.5s ease-in-out;
+}
+.angebotbox a img {
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+    transition: 0.5s ease-in-out;
+}
+.more-link:hover, .angebotbox a img:hover {
+    transform: scale(1.03)translateX(5px);
+}
+/*---------------------FOOTER---------------------*/
+footer {
+    width: 100%;
+    background-color: var(--bg-grey);
+    color: white;
+}
+.footer-spalte a {
+    color: white;
+    display: inline;
+}
+.footer a:hover {
+    color: rgb(201, 201, 201);
+}
+.footer p, .footer a {
+    font-size: 1.05rem;
+}
+footer h3 {
+    text-align: center;
+    padding: 3rem 0 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.footer h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer-socials .footer-social-icon {
+    width: 40px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    border-radius: 50%;
+}
+.footer-socials .footer-social-icon:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 15px rgba(250, 250, 250, 0.4);
+}
+.footer-spalten {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 3rem 5rem 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-spalte {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.footer-spalte:nth-of-type(2) {
+    text-align: center;
+}
+.footer-spalte:nth-of-type(3) {
+    text-align: right;
+}
+.strich-container {
+    max-width: 1650px;
+    padding: 0 5rem;
+    margin: 0 auto;
+}
+.strich {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+.low-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1650px;
+    padding: 1rem 5rem;
+    margin: 0 auto;
+}
+.low-footer a {
+    color: white;
+}
+.low-footer .low-links {
+    display: flex;
+    gap: 1rem;
+}
+.low-footer p, .low-footer a {
+    font-size: 0.9rem;
+    text-align: right;
+}
+.brhide {
+    display: none;
+}
+@media (max-width: 1550px) {
+    .header {
+        padding: 1.7rem 5%;
+    }
+}
+@media (max-width: 1450px) {
+    section {
+        padding: 3rem 3rem;
+    }
+    .footer-spalten {
+        padding: 3rem 3rem 2rem 3rem;
+    }
+    .strich-container {
+        padding: 0 3rem;
+    }
+    .low-footer {
+        padding: 1rem 3rem;
+    }
+}
+@media (max-width: 1400px) {
+    .header {
+        padding: 1.7rem 3%;
+    }
+    .navbar a {
+        margin-left: 2rem;
+    }
+}
+@media (max-width: 1350px) {
+    .angebotbox {
+    max-width: 250px;
+    }
+}
+@media (max-width: 1215px) {
+    .menu-icons {
+        display: block;
+        width: 30px;
+        height: auto;
+        filter: invert(100%);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .menu-icons.active {
+        transform: scale(1.1); /* Kleine Animation beim Aktivieren */
+    }
+    #cancel-icon {
+        display: none;
+        transform: scale(0.6);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 2%;
+        background-color: rgba(0, 21, 49, 0.849);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 1.5rem;
+        border-left: 2px solid var(--logo-blue2);
+        border-bottom: 2px solid var(--logo-blue2);
+        display: none;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    .navbar a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 2rem 0;
+        color: white;
+        border-bottom: 0px solid transparent;
+    }
+    .navbar a:hover {
+        border-bottom: 0px solid gold;
+    }
+    .navbar.active {
+        transform: translateX(0);
+        opacity: 1;
+        display: block;
+    }
+    .angebot-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .angebotbox {
+        max-width: 450px;
+        justify-items: center;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 800px) {
+    .footer-spalten {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem 2rem 1rem;
+    }
+    .footer-spalte {
+        margin-bottom: 3rem;
+    }
+    .footer-spalte a, .footer-spalte h4 {
+        text-align: center;
+    }
+}
+@media (max-width: 678px) {
+    .header {
+        padding: 1.7rem 5%;
+    }
+    .navbar a {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    .top-bild {
+        height: 45vh;
+    }
+    .angebot-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .strich-container {
+        padding: 0 1rem;
+    }
+    .low-footer {
+        padding: 1rem 1rem;
+    }
+}
+@media (max-width: 550px) {
+    .low-footer .low-links {
+        flex-direction: column;
+        gap: 0;
+    }
+    .low-links a {
+        text-align: left;
+    }
+    .brhide {
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+    .navbar {
+        width: 65%;
+    }
+    .navbar a {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+    .logo {
+        height: 2.5rem;
+    }
+    .home h2 {
+        font-size: 1.6rem;
+    }
+    .home h1 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 380px) {
+    section {
+        padding: 3rem 1rem;
+    }
+}
